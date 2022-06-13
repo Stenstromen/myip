@@ -5,12 +5,12 @@ function sendIp(req, res) {
 }
 
 function sendHeader(req, res) {
-    res.status(200).write(printReadme.printReadme);
-    res.end();
+
 }
 
 function sendReadme(req, res) {
-
+    res.status(200).write(printReadme);
+    res.end();
 }
 
 module.exports = {
