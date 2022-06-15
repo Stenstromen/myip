@@ -4,7 +4,7 @@ const mipController = require("../controllers/mip.controller");
 const mipRouter = express.Router();
 
 mipRouter.get("/", mipController.sendIp);
-mipRouter.get("/head", mipController.sendHeader);
+mipRouter.get("/agent", mipController.sendUserAgent);
 mipRouter.get("/readme", mipController.sendReadme);
 
 module.exports = mipRouter;
