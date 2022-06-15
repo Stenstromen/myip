@@ -4,7 +4,7 @@ const forwardedFor = process.env.FORWARDEDFOR;
 
 function sendIp(req, res) {
   if (forwardedFor === "yes") {
-    res.status(200).end(req.headers["x-forwarded-for"]);
+    res.status(200).end(req.headers["x-real-ip"]);
   } else {
     res.status(200).end(req.socket.remoteAddress);
   }
